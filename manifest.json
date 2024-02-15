@@ -1,0 +1,19 @@
+{
+  "name": "Hello World",
+  "version": "0.1",
+  "manifest_version": 3,
+  "description": "Basic Hello World Extension",
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "action":{
+    "default_popup":"popup.html"
+  },
+  "content_scripts": [
+   {
+     "matches": ["https://*.google.com/*"],
+    
+     "js": ["content-script.js"]
+   }
+ ]
+}
