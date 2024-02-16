@@ -38,4 +38,7 @@ const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true })
 // use tab for sending message
 const response = await chrome.tabs.sendMessage(tab.id, { greeting: 'hello' })
 
+/* the message sent using chrome.tabs.sendMessage will be received 
+by the content script that belongs to the tab specified by tab.id. */
+
 console.log(response)
